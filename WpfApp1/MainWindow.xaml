@@ -1,0 +1,56 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="103*"/>
+            <ColumnDefinition Width="697*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="14*"/>
+        </Grid.RowDefinitions>
+        <TabControl RenderTransformOrigin="0.494,0.515" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <TabItem Header="Qeydiyyat" Background="Red" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Grid RenderTransformOrigin="0.457,0.944">
+                    <Label Content="Ad"  Width="50" Margin="31,34,713,324"/>
+                    <Label Content="SoyAd"  Margin="27,108,702,243"/>
+                    <TextBox x:Name="tb1" Width="200" HorizontalAlignment="Left" Margin="121,109,0,242" />
+                    <TextBox x:Name="tb2" Width="200" HorizontalAlignment="Left" Margin="122,34,0,321" />
+                    <StackPanel Orientation="Vertical" Margin="121,172,493,159">
+                        <RadioButton x:Name="Rbt1" Content="Male" Height="18" Width="216"   />
+                        <RadioButton x:Name="Rbt2" Content="FeMale" Height="20" Width="225"   />
+                        <CheckBox Name="Cbx"  Content="Step" IsChecked="False" Width="87" RenderTransformOrigin="0.656,0.473" />
+                    </StackPanel>
+                    <Button Content="Add" Name="add" Background="Gold" Margin="393,352,314,13" Click="add_Click"/>
+                    <ComboBox  Margin="114,282,473,63" Name="compobox"/>
+
+                </Grid>
+
+            </TabItem>
+
+
+            <TabItem Header="ISdifadeciler" Background="Yellow" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Grid Height="403" Margin="0,0,-3,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="13*"/>
+                        <ColumnDefinition Width="13*"/>
+                        <ColumnDefinition Width="6*"/>
+                        <ColumnDefinition Width="65*"/>
+                        <ColumnDefinition Width="700*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="USERS" Margin="258,18,393,356" Grid.Column="4" />
+                    <ListBox Name="usrs" Grid.Column="4" Margin="53,53,144,53"/>
+                    <Button x:Name="delet" Content="Delete" Margin="562,353,85,13" Grid.Column="4" Click="delet_Click"/>
+                    <Button x:Name="Save" Content="Save" Margin="638,353,9,13" Grid.Column="4" Click="save_Click"/>
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
